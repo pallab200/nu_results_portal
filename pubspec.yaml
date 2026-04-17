@@ -2,7 +2,7 @@ name: nu_results_flutter
 description: National University results app built with Flutter for Android.
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ">=3.10.0 <4.0.0"
