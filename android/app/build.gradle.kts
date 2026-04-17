@@ -5,6 +5,15 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+import java.util.Properties
+
+// Load release signing configuration from key.properties
+val keystorePropertiesFile = rootProject.file("key.properties")
+val keystoreProperties = Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(keystorePropertiesFile.inputStream())
+}
+
 android {
     namespace = "com.nu_results_portal"
     compileSdk = flutter.compileSdkVersion
@@ -18,6 +27,16 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+
+    signingConfigs {
+        create("release") {
+            keyAlias = keystoreProperties["keyAlias"].toString()
+            keyPassword = keystoreProperties["keyPassword"].toString()
+            // Resolve keystore path relative to the android directory
+            storeFile = file("${rootProject.projectDir}/${keystoreProperties["storeFile"]}")
+            storePassword = keystoreProperties["storePassword"].toString()
+        }
     }
 
     defaultConfig {
@@ -42,8 +61,8 @@ android {
 
     buildTypes {
         release {
-            // Use Play App Signing (Google signs the final APK for Play Store)
-            // Remove explicit signingConfig to allow Play Console to manage signing
+            // Sign with release keystore
+            signingConfig = signingConfigs.getByName("release")
 
             // ── R8 full-mode: shrink, obfuscate, optimise ───────────────
             isMinifyEnabled = true
