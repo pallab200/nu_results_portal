@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="f" x1="0" x2="1">
+      <stop offset="0" stop-color="#10233b"/>
+      <stop offset="1" stop-color="#1565c0"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#f)"/>
+  <g fill="#fff" font-family="Helvetica,Arial,sans-serif">
+    <text x="72" y="120" font-size="48" font-weight="700">NU Results Portal</text>
+    <text x="72" y="180" font-size="24" fill="#e6f0ff">Fast access to National University results, notices, and PDFs.</text>
+  </g>
+  <rect x="720" y="80" width="220" height="340" rx="16" fill="#fff" opacity="0.08"/>
+  <g transform="translate(740,110)" fill="#fff" font-family="Georgia,serif">
+    <text x="0" y="40" font-size="20">Sample Result</text>
+    <text x="0" y="80" font-size="32" font-weight="700">Roll: 123456</text>
+    <text x="0" y="120" font-size="20">CGPA: 3.65</text>
+  </g>
+</svg>

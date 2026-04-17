@@ -7,7 +7,7 @@
 -keep class io.flutter.view.** { *; }
 
 # ── App entry points ────────────────────────────────────────────────────────
--keep class com.nu_results_portal.** { *; }
+-keep class com.un_results_portal.** { *; }
 
 # ── Google Mobile Ads ────────────────────────────────────────────────────────
 -keep class com.google.android.gms.ads.** { *; }

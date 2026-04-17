@@ -821,7 +821,7 @@ class _NUResultsHomePageState extends State<NUResultsHomePage> {
   }
 
   Future<void> _shareApp() async {
-    const pkg = 'com.nu_results_portal';
+    const pkg = 'com.un_results_portal';
     const url = 'https://play.google.com/store/apps/details?id=$pkg';
     try {
       await Share.share(
@@ -831,7 +831,7 @@ class _NUResultsHomePageState extends State<NUResultsHomePage> {
   }
 
   Future<void> _rateApp() async {
-    const pkg = 'com.nu_results_portal';
+    const pkg = 'com.un_results_portal';
     final marketUri = Uri.parse('market://details?id=$pkg');
     final webUri = Uri.parse(
       'https://play.google.com/store/apps/details?id=$pkg',
