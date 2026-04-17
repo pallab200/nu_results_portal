@@ -32,11 +32,11 @@ class AdManager {
 
   String get _interstitialAdUnit {
     if (Platform.isAndroid) {
-      return 'ca-app-pub-5079343068930294~7587723896';
+      return 'ca-app-pub-5879343068930294/4470380624';
     } else if (Platform.isIOS) {
-      return 'ca-app-pub-5079343068930294~7587723896';
+      return 'ca-app-pub-5879343068930294/4470380624';
     } else {
-      return 'ca-app-pub-5079343068930294~7587723896';
+      return 'ca-app-pub-5879343068930294/4470380624';
     }
   }
 
@@ -3772,7 +3772,7 @@ class _AppBannerAdState extends State<_AppBannerAd> {
   void initState() {
     super.initState();
     _banner = BannerAd(
-      adUnitId: 'ca-app-pub-5079343068930294~7587723896',
+      adUnitId: 'ca-app-pub-5879343068930294/3672304278',
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
