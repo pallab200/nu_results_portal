@@ -21,6 +21,10 @@ subprojects {
         if (project.extensions.findByName("android") != null) {
             extensions.configure<com.android.build.gradle.BaseExtension>("android") {
                 buildToolsVersion("34.0.0")
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_17
+                    targetCompatibility = JavaVersion.VERSION_17
+                }
             }
         }
     }
