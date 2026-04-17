@@ -99,6 +99,9 @@ android {
 dependencies {
     // Core-library desugaring lets plugins use Java 8+ APIs on older devices
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+    
+    // AndroidX Core for edge-to-edge display support
+    implementation("androidx.core:core:1.13.1")
 }
 
 flutter {
